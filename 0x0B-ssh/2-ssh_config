@@ -1,0 +1,12 @@
+
+#!/usr/bin/env bash
+# ths script contains my config files
+# Configure ssh client so that you can connect to a server without typing a password.
+Host *
+ HashKnownHosts yes
+
+Host *
+ PasswordAuthentication no
+
+Host 54.157.181.232
+  IdentifyFile ~/.ssh/school
