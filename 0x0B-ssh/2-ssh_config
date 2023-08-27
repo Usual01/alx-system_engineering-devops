@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# ths script contains my config files
+
+Host *
+ PasswordAuthentication no
+
+Host 107.23.109.23
+  IdentifyFile ~/.ssh/school
