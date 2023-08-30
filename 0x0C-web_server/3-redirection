@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# instal Nginx and configure it
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+echo 'Hello World!' | sudo tee /var/www/html/index.html
+sudo sed -i '/root \/var\/www\/html;/a \    rewrite ^\/redirect_me https:\/\/www.alxafrica.com\/ permanent;' /etc/nginx/sites-available/default
+sudo service nginx restart
